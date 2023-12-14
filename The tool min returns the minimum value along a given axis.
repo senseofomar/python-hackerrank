@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy as np
+#Read input
+n,m=map(int,input().split())
+arr=np.array([input().split()for _ in range(n)],int)
+#perform the min functions along axis 1
+min_result=np.min(arr,axis=1)
+#find the max of the min values
+max_of_min=np.max(min_result)
+#Print the result
+print(max_of_min)
