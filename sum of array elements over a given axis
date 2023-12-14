@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy as np
+#Read input
+n, m=map(int, input().split())
+arr=np.array([input().split()for _ in range(n)], int)
+#sum along axis 0
+sum_result = np.sum(arr,axis=0)
+#find the product of the sum
+product_result=np.prod(sum_result)
+#print the result
+print(product_result)
